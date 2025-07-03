@@ -4,6 +4,11 @@ from datetime import datetime
 
 app = Flask(__name__)
 
+# Ruta raíz redirige al formulario
+@app.route("/")
+def inicio():
+    return redirect("/ordinario")
+
 @app.route("/ordinario", methods=["GET", "POST"])
 def ordinario():
     if request.method == "POST":
@@ -30,3 +35,4 @@ def ordinario():
 
 if __name__ == "__main__":
     app.run(debug=True)
+
