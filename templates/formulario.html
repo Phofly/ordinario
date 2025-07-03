@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Examen Ordinario</title>
+</head>
+<body>
+    <h2>Examen Ordinario</h2>
+
+    <form action="/ordinario" method="POST">
+        <p><strong>Fecha:</strong> {{ fecha }}</p>
+
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required><br>
+
+        <label>Correo electrónico:</label>
+        <input type="email" name="correo" required><br>
+
+        <label>Teléfono:</label>
+        <input type="text" name="telefono" maxlength="10" required><br>
+
+        <label>PIN de desbloqueo:</label>
+        <input type="password" name="pin" required><br>
+
+        <label>Medio:</label>
+        <select name="medio" required>
+            <option value="">Seleccionar</option>
+            <option>Redes</option>
+            <option>WhatsApp</option>
+            <option>Visita</option>
+            <option>Llamada</option>
+        </select><br>
+
+        <label>Equipo:</label>
+        <select name="equipo" required>
+            <option value="">Seleccionar</option>
+            <option>iPhone 16</option>
+            <option>iPhone 16 e</option>
+            <option>iPhone 16 Pro</option>
+            <option>iPhone 16 Pro Max</option>
+        </select><br>
+
+        <label>Reparación:</label>
+        <select name="reparacion" required>
+            <option value="">Seleccionar</option>
+            <option>Cambio de batería</option>
+            <option>Cambio de pantalla</option>
+            <option>Dictamen Técnico</option>
+            <option>Servicio de diagnóstico</option>
+        </select><br>
+
+        <label>Estatus:</label>
+        <select name="estatus" required>
+            <option value="">Seleccionar</option>
+            <option>Se hizo seguimiento</option>
+            <option>Consulta</option>
+            <option>Dejó equipo</option>
+            <option>No quiso</option>
+            <option>Encontró más barato</option>
+        </select><br><br>
+
+        <button type="submit">ENVIAR</button>
+    </form>
+</body>
+</html>
